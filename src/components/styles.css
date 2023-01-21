@@ -1,0 +1,121 @@
+@import "../styles/variables.css";
+
+* {
+	font-family: Arial, Helvetica, sans-serif;
+}
+ul {
+	display: flex;
+	padding: 0.5rem;
+}
+ul > li {
+	list-style: none;
+	margin: 0rem 0.5rem;
+}
+
+ul > li:first-child {
+	padding-top: 5px;
+	font: 16px Arial, sans-serif;
+}
+li > button {
+	background-color: white;
+	min-width: 100px;
+	min-height: 30px;
+	border: none;
+	border-radius: 10px;
+	color: var(--text);
+	font: 16px Arial, sans-serif;
+	cursor: pointer;
+}
+li > button:active {
+	background-color: var(--background);
+}
+
+@keyframes spinner {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.loading-spinner {
+	width: 50px;
+	height: 50px;
+	border: 10px solid #f3f3f3; /* Light grey */
+	border-top: 10px solid #383636; /* Black */
+	border-radius: 50%;
+	animation: spinner 1.5s linear infinite;
+}
+
+.emailItemWrapper {
+	width: 90vw;
+	display: flex;
+	margin: 2rem 3rem;
+	background-color: var(--background);
+	border: 1px solid var(--border);
+	border-radius: 10px;
+}
+.emailListBody {
+	width: 40vw;
+	display: flex;
+	margin: 2rem 3rem;
+	background-color: var(--background);
+	border: 1px solid var(--border);
+	border-radius: 10px;
+}
+.avatarEmail {
+	padding: 2rem 0rem;
+	margin: 0.1rem 2rem;
+}
+.avatarIcon {
+	cursor: pointer;
+	background-color: var(--accent);
+	display: inherit;
+	height: 35px;
+	width: 35px;
+	padding-top: 10px;
+	text-align: center;
+	border-radius: 50%;
+}
+.emailDetails > p {
+	font-size: 14px;
+	font-weight: 300;
+}
+.emailBody {
+	background-color: white;
+	min-height: 100vh;
+}
+.emailListWrapper {
+	padding: 0.5rem;
+	display: flex;
+}
+.emailBodyItemDataSection {
+	background-color: var(--background);
+	border: 1px solid var(--border);
+	border-radius: 10px;
+	margin: 1.8rem;
+	height: fit-content;
+	padding: 1rem 1.5rem;
+}
+.emailBodyItemDataSection > header {
+	display: flex;
+	position: relative;
+}
+.emailBodyItemDataSection > header > div:nth-child(3) {
+	margin-left: calc(100% - 300px);
+}
+
+.favbtn {
+	width: 150px;
+	height: 30px;
+	background-color: var(--accent);
+	border: hidden;
+	border-radius: 15px;
+	color: var(--read);
+	font-size: 14px;
+	font-family: inherit;
+	cursor: pointer;
+}
+.readEmail {
+	background-color: var(--read);
+}
